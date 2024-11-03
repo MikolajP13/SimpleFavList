@@ -1,5 +1,6 @@
 .fav-card {
   margin: 0 4px 8px 0;
+  background-color: #F3EEEA;
 }
 
 .row-container {
@@ -14,7 +15,8 @@
 }
 
 .card-content-container > img {
-  width: 120px;
+  max-width: 120px;
+  max-height: 120px;
   border-radius: 8px;
 }
 

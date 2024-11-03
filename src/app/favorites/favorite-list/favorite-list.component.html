@@ -6,8 +6,8 @@
 </div>
 <div class="fav-container">
   <mat-list>
-    @for (item of items; track $index) {
-    <app-favorite-card></app-favorite-card>
+    @for (fav of favs(); track $index) {
+    <app-favorite-card [fav]="fav"></app-favorite-card>
     }
   </mat-list>
 </div>

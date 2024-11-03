@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
+import { Favorite } from '../favorite.model';
 
 @Component({
   selector: 'app-favorite-card',
@@ -11,4 +12,6 @@ import { MatMenuModule } from '@angular/material/menu';
   templateUrl: './favorite-card.component.html',
   styleUrl: './favorite-card.component.css',
 })
-export class FavoriteCardComponent {}
+export class FavoriteCardComponent {
+  fav = input.required<Favorite>();
+}
