@@ -1,0 +1,5 @@
+.list-button-container {
+  display: flex;
+  justify-content: end;
+  margin: 0 15% 8px 0;
+}

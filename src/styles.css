@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.fav-header {
+  justify-content: center;
+  display: flex;
+}
+
+.fav-container {
+  display: flex;
+  justify-content: center;
+  margin: 0 15%;
+  min-height: calc(100vh - 210px);
+  max-height: calc(100vh - 210px);
+  overflow: auto;
+}

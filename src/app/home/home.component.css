@@ -1,0 +1,22 @@
+.home-card {
+  background-color: #EBE3D5;
+}
+
+.home-card:first-child {
+  margin-left: 2em;
+}
+
+.home-card:last-child {
+  margin-right: 2em;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+  column-gap: 2em;
+}
+
+.card-header {
+  justify-content: center;
+  text-align: center;
+}

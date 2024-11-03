@@ -1,0 +1,13 @@
+<div class="list-button-container">
+  <button mat-fab extended aria-label="Example icon button with a heart icon">
+    <mat-icon>favorite</mat-icon>
+    <span>Add</span>
+  </button>
+</div>
+<div class="fav-container">
+  <mat-list>
+    @for (item of items; track $index) {
+    <app-favorite-card></app-favorite-card>
+    }
+  </mat-list>
+</div>
