@@ -2,6 +2,7 @@ import { Component, DestroyRef, inject, OnInit } from '@angular/core';
 import { FavoriteListComponent } from '../favorites/favorite-list/favorite-list.component';
 import { Favorite, FavoriteCategory } from '../favorites/favorite.model';
 import { FavoritesService } from '../favorites/favorite-service/favorites.service';
+import { startWith, switchMap } from 'rxjs';
 
 @Component({
   selector: 'app-books',
@@ -18,12 +19,17 @@ export class BooksComponent implements OnInit {
   favoriteBooks: Favorite[] = [];
 
   ngOnInit(): void {
-    const subsciption = this.favoritesService.getFavoriteBooks().subscribe({
-      next: (favs) => (this.favoriteBooks = favs),
-    });
+    const subsciption = this.favoritesService.refreshFavorites$
+      .pipe(
+        startWith({}),
+        switchMap(() => this.favoritesService.getFavoriteBooks())
+      )
+      .subscribe({
+        next: (favs) => (this.favoriteBooks = favs),
+      });
 
     this.destroyRef.onDestroy(() => {
       subsciption.unsubscribe();
-    })
+    });
   }
 }

@@ -10,15 +10,6 @@
       "imgUrl": "https://image.tmdb.org/t/p/original/6wkfovpn7Eq8dYNKaG5PY3q2oq6.jpg"
     },
     {
-      "id": "2",
-      "category": "Book",
-      "creator": "Stieg Larsson",
-      "releaseYear": "2006",
-      "title": "The Girl Who Played with Fire",
-      "description": "Lisbeth Salander is a wanted woman. Two Millennium journalists about to expose the truth about sex trafficking in Sweden are murdered, and Salander's prints are on the weapon. Her history of unpredictable and vengeful behaviour makes her an official danger to society - but no-one can find her. ",
-      "imgUrl": "http://bookcoverarchive.com/wp-content/uploads/amazon/the_girl_who_played_with_fire.jpg"
-    },
-    {
       "id": "3",
       "category": "Movie",
       "creator": "Peter Jackson",
@@ -71,24 +62,6 @@
       "title": "Ex Machina",
       "description": "A young programmer is selected to participate in a ground-breaking experiment in synthetic intelligence by evaluating the human qualities of a highly advanced humanoid A.I.",
       "imgUrl": "https://image.tmdb.org/t/p/original/9goPE2IoMIXxTLWzl7aizwuIiLh.jpg"
-    },
-    {
-      "id": "9",
-      "category": "Book",
-      "creator": "Dmitry Glukhovsky",
-      "releaseYear": "2002",
-      "title": "Metro 2033",
-      "description": "Post-apocalyptic fiction novel. It is set within the Moscow Metro, where the last survivors hide after a global nuclear holocaust.",
-      "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9GpgGFJvU937lxlmpr5_h9vPLumY7kDF1kw&s"
-    },
-    {
-      "id": "10",
-      "category": "Book",
-      "creator": "Isaac Asimov",
-      "releaseYear": "1954",
-      "title": "The Caves of Steel",
-      "description": "A riveting science fiction novel set in a future where Earth is overpopulated and humans live in vast enclosed cities. Detective Elijah Baley is tasked with solving a murder mystery that leads him to confront deep-seated prejudices against the robot population.",
-      "imgUrl": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1405527971i/1627063.jpg"
     },
     {
       "id": "11",

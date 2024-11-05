@@ -10,5 +10,16 @@ export interface Favorite {
 
 export enum FavoriteCategory {
   Movie = 'Movie',
-  Book = 'Book'
+  Book = 'Book',
+}
+
+export interface FavoriteDialogData {
+  dialogMode: DialogMode;
+  favoriteCategory: FavoriteCategory;
+  favorite: Favorite;
+}
+
+export enum DialogMode {
+  New = 'New',
+  Edit = 'Edit',
 }

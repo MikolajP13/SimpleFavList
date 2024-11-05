@@ -3,6 +3,15 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
+.fav-dialog {
+  height: 540px;
+  width: 650px;
+}
+
+.fav-dialog .mat-dialog-container { 
+  resize: both;
+}
+
 .fav-header {
   justify-content: center;
   display: flex;
@@ -15,4 +24,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   min-height: calc(100vh - 210px);
   max-height: calc(100vh - 210px);
   overflow: auto;
+}
+
+.mat-mdc-dialog-container {
+  --mdc-dialog-container-shape: 8px;
 }

@@ -1,5 +1,5 @@
 <div class="list-button-container">
-  <button mat-fab extended aria-label="Example icon button with a heart icon">
+  <button mat-fab extended aria-label="Example icon button with a heart icon" (click)="onAddFavorite()">
     <mat-icon>favorite</mat-icon>
     <span>Add</span>
   </button>
@@ -7,7 +7,7 @@
 <div class="fav-container">
   <mat-list>
     @for (fav of favs(); track $index) {
-    <app-favorite-card [fav]="fav"></app-favorite-card>
+    <app-favorite-card [fav]="fav" [category]="category"></app-favorite-card>
     }
   </mat-list>
 </div>

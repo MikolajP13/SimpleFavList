@@ -1,0 +1,39 @@
+<div class="dialog-container">
+  <div class="dialog-header">
+    <h2 mat-dialog-title>{{data.dialogMode}} favorite
+      {{data.favoriteCategory | lowercase}}</h2>
+    <button mat-icon-button aria-label="Icon close button" (click)="onClose()">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+  <form [formGroup]="favForm" (ngSubmit)="onSubmit()">
+    <mat-dialog-content class="fav-form-content">
+      <mat-form-field>
+        <mat-label>Title</mat-label>
+        <input matInput formControlName="title">
+      </mat-form-field>
+      <div class="form-row">
+        <mat-form-field class="form-row-left">
+          <mat-label>Creator</mat-label>
+          <input matInput formControlName="creator">
+        </mat-form-field>
+        <mat-form-field class="form-row-right">
+          <mat-label>Release year</mat-label>
+          <input matInput formControlName="releaseYear">
+        </mat-form-field>
+      </div>
+      <mat-form-field>
+        <mat-label>Description</mat-label>
+        <textarea rows="3" style="resize:none;" matInput formControlName="description"></textarea>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Image url</mat-label>
+        <input matInput formControlName="imgUrl">
+      </mat-form-field>
+    </mat-dialog-content>
+    <mat-dialog-actions>
+      <!-- <button mat-button (click)="onClose()">Close</button> -->
+      <button type="submit" mat-button>Submit</button>
+    </mat-dialog-actions>
+  </form>
+</div>
