@@ -1,3 +1,5 @@
+import { FormControl } from "@angular/forms";
+
 export interface Favorite {
   id: string;
   category: FavoriteCategory;
@@ -15,6 +17,14 @@ export interface FavoriteDialogData {
 }
 
 export type FavoriteNewEdit = Omit<Favorite, 'id'>;
+
+export interface FavoriteForm {
+  creator: FormControl<string>;
+  releaseYear: FormControl<string>;
+  title: FormControl<string>;
+  description: FormControl<string>;
+  imgUrl: FormControl<string>;
+}
 
 export enum FavoriteCategory {
   Movie = 'Movie',
