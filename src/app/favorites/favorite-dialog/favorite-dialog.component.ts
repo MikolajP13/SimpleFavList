@@ -1,7 +1,12 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
-import { Favorite, FavoriteDialogData } from '../favorite.model';
+import {
+  DialogMode,
+  Favorite,
+  FavoriteDialogData,
+  FavoriteNewEdit,
+} from '../favorite.model';
 import {
   MAT_DIALOG_DATA,
   MatDialogTitle,
@@ -17,6 +22,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
+import { FavoritesService } from '../favorite-service/favorites.service';
 
 @Component({
   selector: 'app-favorite-dialog',
@@ -36,6 +42,7 @@ import { MatInputModule } from '@angular/material/input';
 })
 export class FavoriteDialogComponent implements OnInit {
   private dialogRef = inject(MatDialogRef<FavoriteDialogComponent>);
+  private favoritesService = inject(FavoritesService);
   data = inject<FavoriteDialogData>(MAT_DIALOG_DATA);
   favForm!: FormGroup;
 
@@ -44,7 +51,22 @@ export class FavoriteDialogComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log('submitted');
+    const favorite: FavoriteNewEdit = {
+      category: this.data.favoriteCategory,
+      creator: this.favForm.value.creator,
+      releaseYear: this.favForm.value.releaseYear,
+      title: this.favForm.value.title,
+      description: this.favForm.value.description,
+      imgUrl: this.favForm.value.imgUrl,
+    };
+
+    if (this.data.dialogMode === DialogMode.New) {
+      this.favoritesService.postFavorite(favorite).subscribe();
+    } else if (this.data.dialogMode === DialogMode.Edit) {
+      this.favoritesService.putFavorite(this.data.favorite.id, favorite).subscribe();
+    }
+
+    this.onClose();
   }
 
   onClose() {

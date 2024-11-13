@@ -1,7 +1,7 @@
 import { inject, Injectable } from '@angular/core';
 import { environment } from '../../../environment/environment.development';
 import { HttpClient } from '@angular/common/http';
-import { Favorite, FavoriteCategory } from '../favorite.model';
+import { Favorite, FavoriteCategory, FavoriteNewEdit } from '../favorite.model';
 import { map, Observable, Subject, tap } from 'rxjs';
 
 @Injectable({
@@ -42,6 +42,18 @@ export class FavoritesService {
       map((favs) => favs.filter((f) => f.category === FavoriteCategory.Book)),
       map((favs) => favs.length)
     );
+  }
+
+  postFavorite(favorite: FavoriteNewEdit) {
+    return this.httpClient
+      .post<Favorite>(`${this.apiUrl}/favorites`, favorite)
+      .pipe(tap(() => this.refreshFavorites$.next()));
+  }
+
+  putFavorite(favId: string, favorite: FavoriteNewEdit) {
+    return this.httpClient
+    .put<Favorite>(`${this.apiUrl}/favorites/${favId}`, favorite)
+    .pipe(tap(() => this.refreshFavorites$.next()));
   }
 
   deleteFavorite(id: string) {

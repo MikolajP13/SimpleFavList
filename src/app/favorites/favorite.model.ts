@@ -8,15 +8,17 @@ export interface Favorite {
   imgUrl: string;
 }
 
-export enum FavoriteCategory {
-  Movie = 'Movie',
-  Book = 'Book',
-}
-
 export interface FavoriteDialogData {
   dialogMode: DialogMode;
   favoriteCategory: FavoriteCategory;
   favorite: Favorite;
+}
+
+export type FavoriteNewEdit = Omit<Favorite, 'id'>;
+
+export enum FavoriteCategory {
+  Movie = 'Movie',
+  Book = 'Book',
 }
 
 export enum DialogMode {

@@ -64,13 +64,13 @@
       "imgUrl": "https://image.tmdb.org/t/p/original/9goPE2IoMIXxTLWzl7aizwuIiLh.jpg"
     },
     {
-      "id": "11",
       "category": "Book",
       "creator": "René Goscinny, Jean-Jacques Sempé",
-      "releaseYear": "1987",
+      "releaseYear": 1987,
       "title": "Le Petit Nicolas",
       "description": "The books are told from the point of view of Nicolas himself, which gives the book a distinct and personal sense of humour. The narration is a pastiche of childish storytelling, with run-on sentences and schoolyard slang used in abundance, and much of the humour derives from Nicolas’s misunderstanding of adults' behaviour.",
-      "imgUrl": "https://ksiegarniaedukator.pl/images/ck526/1000-2000/Petit-Nicolas-compilation_%5B1356%5D_480.jpg"
+      "imgUrl": "https://ksiegarniaedukator.pl/images/ck526/1000-2000/Petit-Nicolas-compilation_%5B1356%5D_480.jpg",
+      "id": "11"
     },
     {
       "id": "12",
